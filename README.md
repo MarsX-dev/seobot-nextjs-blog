@@ -1,4 +1,4 @@
-# [SeoBot](https://seobotai.com) Blog API for Next.js Website
+# [SeoBot](https://seobotai.com/?utm_source=github) Blog API for Next.js Website
 
 ## Overview
 
@@ -7,7 +7,7 @@ Elevate your Next.js website by integrating SeoBot's Blog API. This setup allows
 ## Prerequisites
 
 - Node.js installed on your machine
-- SeoBot API Key (you can find it in your website settings on [app.seobotai.com](https://app.seobotai.com))
+- SeoBot API Key (you can find it in your website settings on [app.seobotai.com](https://app.seobotai.com/?utm_source=github))
 
 ## Environment Setup
 
@@ -70,4 +70,4 @@ For additional assistance or information, feel free to reach out.
 
 ---
 
-Revolutionize your website's content strategy with real-time, automated, SEO-optimized blog posts. Get started with [SeoBot](https://seobotai.com) AI Blog Autopilot integration today!
+Revolutionize your website's content strategy with real-time, automated, SEO-optimized blog posts. Get started with [SeoBot](https://seobotai.com/?utm_source=github) AI Blog Autopilot integration today!
