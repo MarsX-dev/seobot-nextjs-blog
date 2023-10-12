@@ -4,6 +4,10 @@
 
 Elevate your Next.js website by integrating SeoBot's Blog API. This setup allows you to fetch and render real-time, SEO-optimized blog content directly into your website.
 
+## [**Demo**](https://devhunt.org/blog?utm_source=github)
+
+Visit the [DevHunt Blog](https://devhunt.org/blog?utm_source=github) to check out an example of SeoBot Blog API integration.
+
 ## Prerequisites
 
 - Node.js installed on your machine
