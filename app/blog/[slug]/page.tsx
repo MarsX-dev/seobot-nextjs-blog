@@ -80,7 +80,7 @@ export default async function Article({ params: { slug } }: { params: { slug: st
         </span>
         {post.readingTime ? <span>{` ⦁ ${post.readingTime}`} min read</span> : null}
       </div>
-      <div className='prose prose-h1:text-slate-100 prose-h2:text-slate-100 prose-h3:text-slate-100 prose-strong:text-slate-100 dark:text-slate-100' dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      <div className='prose prose-h1:text-slate-100 prose-h2:text-slate-100 prose-h3:text-slate-100 prose-strong:text-slate-100 dark:text-slate-100 mt-8' dangerouslySetInnerHTML={{ __html: post.html }}></div>
       <div className="flex flex-wrap gap-2 justify-start w-full">
           {(post.tags || []).map((t: any, ix: number) => (
             <a key={ix} href={`/blog/tag/${t.slug}`} className="dark:bg-slate-700 px-3 rounded text-sm">

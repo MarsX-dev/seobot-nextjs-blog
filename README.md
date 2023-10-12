@@ -11,10 +11,9 @@ Elevate your Next.js website by integrating SeoBot's Blog API. This setup allows
 
 ## Environment Setup
 
-First, set up your environment variables. Create a `.env.local` file for local development:
+First, set up your SeoBot API Key environment variable. Create a `.env.local` file for local development:
 
 ```bash
-WEBSITE_HOST=<your_website_host>
 SEOBOT_API_KEY=<your_seobot_key>
 ```
 
@@ -40,6 +39,23 @@ To test the SeoBot Blog API, you can use our [Postman API Workspace](https://www
 
 You can begin customizing your blog design by editing the files under the `app/blog/` route. Your changes will be automatically reflected in the app thanks to Next.js's hot reloading feature.
 
+## Sitemap Configuration for SEO
+
+### Automatic Integration
+
+This project comes with a separate `blog/sitemap.xml` generated dynamically. If you have an existing dynamic sitemap, you can programmatically merge the blog sitemap into it. The exact steps depend on how you're generating your main sitemap, but the goal is to combine them seamlessly.
+
+### Standalone Blog Sitemap
+
+If you prefer not to merge, it's crucial to submit the standalone `blog/sitemap.xml` to your Google Search Console for SEO.
+
+- Open Google Search Console.
+- Select 'Sitemaps' from the menu.
+- Enter the URL of your `blog/sitemap.xml`.
+- Click 'Submit'.
+
+⚠️ **Google Limits**: keep this in mind that Google restricts sitemaps to 50,000 URLs and a file size of up to 50MB.
+
 ## Contributing
 
 If you find any bugs or have feature suggestions, please open an issue or submit a pull request.
@@ -54,4 +70,4 @@ For additional assistance or information, feel free to reach out.
 
 ---
 
-Revolutionize your website's content strategy with real-time, automated, SEO-optimized blog posts. Get started with SeoBot AI Autopilot integration today!
+Revolutionize your website's content strategy with real-time, automated, SEO-optimized blog posts. Get started with [SeoBot](https://seobotai.com) AI Blog Autopilot integration today!
