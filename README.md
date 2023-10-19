@@ -21,9 +21,25 @@ First, set up your SeoBot API Key environment variable. Create a `.env.local` fi
 SEOBOT_API_KEY=<your_seobot_key>
 ```
 
+Example for local development:
+
+```bash
+SEOBOT_API_KEY=a8c58738-7b98-4597-b20a-0bb1c2fe5772
+```
+
 ## Running the Development Server
 
-Execute one of the following commands to start the development server:
+1. Install the required packages:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+2. Execute one of the following commands to start the development server:
 
 ```bash
 npm run dev
@@ -33,7 +49,7 @@ yarn dev
 pnpm dev
 ```
 
-Once the server is running, navigate to [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+Once the server is running, navigate to [http://localhost:3000/blog](http://localhost:3000/blog) in your browser to view the application.
 
 ## Postman API Workspace
 
