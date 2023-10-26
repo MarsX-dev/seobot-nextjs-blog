@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 async function getPosts(slug: string, page: number) {
   const key = process.env.SEOBOT_API_KEY;
-  if (!key) throw Error('SEOBOT_API_KEY enviroment variable must be set');
+  if (!key) throw Error('SEOBOT_API_KEY enviroment variable must be set. You can use the DEMO key a8c58738-7b98-4597-b20a-0bb1c2fe5772 for testing - please set it in the root .env.local file');
 
   try {
     const res = await fetch(`https://app.seobotai.com/api/articles?key=${key}&page=${page}&limit=10&categorySlug=${slug}`, { cache: 'no-store' });
