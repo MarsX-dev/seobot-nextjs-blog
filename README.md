@@ -21,7 +21,7 @@ First, set up your SeoBot API Key environment variable. Create a `.env.local` fi
 SEOBOT_API_KEY=<your_seobot_key>
 ```
 
-Example for local development:
+⚠️ You can use following **DEMO** SEOBOT_API_KEY for local development:
 
 ```bash
 SEOBOT_API_KEY=a8c58738-7b98-4597-b20a-0bb1c2fe5772
