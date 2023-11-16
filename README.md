@@ -1,21 +1,21 @@
-# [SeoBot](https://seobotai.com/?utm_source=github) Blog API for Next.js Website
+# [SEObot](https://seobotai.com/?utm_source=github) Blog API for Next.js Website
 
 ## Overview
 
-Elevate your Next.js website by integrating SeoBot's Blog API. This setup allows you to fetch and render real-time, SEO-optimized blog content directly into your website.
+Elevate your Next.js website by integrating SEObot's Blog API. This setup allows you to fetch and render real-time, SEO-optimized blog content directly into your website.
 
 ## Demo
 
-Visit the [DevHunt Blog](https://devhunt.org/blog?utm_source=github) to check out an example of SeoBot Blog API integration.
+Visit the [DevHunt Blog](https://devhunt.org/blog?utm_source=github) to check out an example of SEObot Blog API integration.
 
 ## Prerequisites
 
 - Node.js installed on your machine
-- SeoBot API Key (you can find it in your website settings on [app.seobotai.com](https://app.seobotai.com/?utm_source=github))
+- SEObot API Key (you can find it in your website settings on [app.seobotai.com](https://app.seobotai.com/?utm_source=github))
 
 ## Environment Setup
 
-First, set up your SeoBot API Key environment variable. Create a `.env.local` file for local development:
+First, set up your SEObot API Key environment variable. Create a `.env.local` file for local development:
 
 ```bash
 SEOBOT_API_KEY=<your_seobot_key>
@@ -53,7 +53,7 @@ Once the server is running, navigate to [http://localhost:3000/blog](http://loca
 
 ## Postman API Workspace
 
-To test the SeoBot Blog API, you can use our [Postman API Workspace](https://www.postman.com/seobotai/workspace/seobotai-com/overview). This workspace includes pre-configured requests for the API.
+To test the SEObot Blog API, you can use our [Postman API Workspace](https://www.postman.com/seobotai/workspace/seobotai-com/overview). This workspace includes pre-configured requests for the API.
 
 ## Editing the Blog Design
 
@@ -90,4 +90,4 @@ For additional assistance or information, feel free to reach out.
 
 ---
 
-Revolutionize your website's content strategy with real-time, automated, SEO-optimized blog posts. Get started with [SeoBot](https://seobotai.com/?utm_source=github) AI Blog Autopilot integration today!
+Revolutionize your website's content strategy with real-time, automated, SEO-optimized blog posts. Get started with [SEObot](https://seobotai.com/?utm_source=github) AI Blog Autopilot integration today!

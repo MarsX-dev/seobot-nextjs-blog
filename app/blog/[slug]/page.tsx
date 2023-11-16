@@ -1,5 +1,7 @@
 import { type Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
+import { BlogClient } from 'seobot';
 
 import NotFound from '@/components/NotFound';
 import HighlightCode from '@/components/HighlightCode';
@@ -9,13 +11,8 @@ async function getPost(slug: string) {
   const key = process.env.SEOBOT_API_KEY;
   if (!key) throw Error('SEOBOT_API_KEY enviroment variable must be set. You can use the DEMO key a8c58738-7b98-4597-b20a-0bb1c2fe5772 for testing - please set it in the root .env.local file');
 
-  try {
-    const res = await fetch(`https://app.seobotai.com/api/article?key=${key}&slug=${slug}`, { cache: 'no-store' });
-    const result = await res.json();
-    return result?.data?.article;
-  } catch {
-    return null;
-  }
+  const client = new BlogClient(key);
+  return client.getArticle(slug);
 }
 
 export async function generateMetadata({ params: { slug } }: { params: { slug: string } }): Promise<Metadata> {
@@ -80,6 +77,9 @@ export default async function Article({ params: { slug } }: { params: { slug: st
           {new Date(post.publishedAt || post.createdAt).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' })}
         </span>
         {post.readingTime ? <span>{` ⦁ ${post.readingTime}`} min read</span> : null}
+      </div>
+      <div className="relative flex justify-center items-center w-full aspect-video mt-2 text-center rounded-xl overflow-hidden">
+        <Image src={post.image} alt={post.headline} layout="fill" objectFit="cover" className='!inset-auto' />
       </div>
       <div className='prose prose-h1:text-slate-100 prose-h2:text-slate-100 prose-h3:text-slate-100 prose-strong:text-slate-100 dark:text-slate-100 mt-8' dangerouslySetInnerHTML={{ __html: post.html }}></div>
       <div className="flex flex-wrap gap-2 justify-start w-full">
