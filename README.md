@@ -51,6 +51,10 @@ pnpm dev
 
 Once the server is running, navigate to [http://localhost:3000/blog](http://localhost:3000/blog) in your browser to view the application.
 
+## API client library
+
+This project incorporates the SEObot Blog API Client Library. For more details and to install the npm package, visit [seobot on npmjs](https://www.npmjs.com/package/seobot).
+
 ## Postman API Workspace
 
 To test the SEObot Blog API, you can use our [Postman API Workspace](https://www.postman.com/seobotai/workspace/seobotai-com/overview). This workspace includes pre-configured requests for the API.
