@@ -55,10 +55,6 @@ Once the server is running, navigate to [http://localhost:3000/blog](http://loca
 
 This project incorporates the SEObot Blog API Client Library. For more details and to install the npm package, visit [seobot on npmjs](https://www.npmjs.com/package/seobot).
 
-## Postman API Workspace
-
-To test the SEObot Blog API, you can use our [Postman API Workspace](https://www.postman.com/seobotai/workspace/seobotai-com/overview). This workspace includes pre-configured requests for the API.
-
 ## Editing the Blog Design
 
 You can begin customizing your blog design by editing the files under the `app/blog/` route. Your changes will be automatically reflected in the app thanks to Next.js's hot reloading feature.
