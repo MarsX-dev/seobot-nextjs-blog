@@ -16,6 +16,8 @@ function deslugify(str: string) {
   return str.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
 }
 
+export const fetchCache = 'force-no-store';
+
 export async function generateMetadata({ params: { slug } }: { params: { slug: string } }): Promise<Metadata> {
   const title = `${deslugify(slug)} - DevHunt Blog`;
   return {

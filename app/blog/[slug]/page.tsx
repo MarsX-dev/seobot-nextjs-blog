@@ -15,6 +15,8 @@ async function getPost(slug: string) {
   return client.getArticle(slug);
 }
 
+export const fetchCache = 'force-no-store';
+
 export async function generateMetadata({ params: { slug } }: { params: { slug: string } }): Promise<Metadata> {
   const post = await getPost(slug);
   if (!post) return {};

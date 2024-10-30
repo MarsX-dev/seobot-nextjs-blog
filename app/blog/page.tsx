@@ -37,6 +37,8 @@ async function getPosts(page: number) {
   return client.getArticles(page, 10);
 }
 
+export const fetchCache = 'force-no-store';
+
 export default async function Blog({ searchParams: { page } }: { searchParams: { page: number } }) {
   const pageNumber = Math.max((page || 0) - 1, 0);
   const { total, articles } = await getPosts(pageNumber);
