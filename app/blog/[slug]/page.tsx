@@ -7,6 +7,8 @@ import NotFound from '@/components/NotFound';
 import HighlightCode from '@/components/HighlightCode';
 import '../blog.css';
 
+const BASE_URL = process.env.BASE_URL
+
 async function getPost(slug: string) {
   const key = process.env.SEOBOT_API_KEY;
   if (!key) throw Error('SEOBOT_API_KEY enviroment variable must be set. You can use the DEMO key a8c58738-7b98-4597-b20a-0bb1c2fe5772 for testing - please set it in the root .env.local file');
@@ -18,6 +20,8 @@ async function getPost(slug: string) {
 export const fetchCache = 'force-no-store';
 
 export async function generateMetadata({ params: { slug } }: { params: { slug: string } }): Promise<Metadata> {
+  if (!BASE_URL) throw Error('BASE_URL enviroment variable must be set.');
+
   const post = await getPost(slug);
   if (!post) return {};
 
@@ -26,7 +30,7 @@ export async function generateMetadata({ params: { slug } }: { params: { slug: s
   return {
     title,
     description,
-    metadataBase: new URL('https://devhunt.org'),
+    metadataBase: new URL(BASE_URL),
     alternates: {
       canonical: `/blog/${slug}`,
     },
@@ -35,7 +39,7 @@ export async function generateMetadata({ params: { slug } }: { params: { slug: s
       title,
       description,
       images: [post.image],
-      url: `https://devhunt.org/blog/${slug}`,
+      url: `${BASE_URL}/blog/${slug}`,
     },
     twitter: {
       title,

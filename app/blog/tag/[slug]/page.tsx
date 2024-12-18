@@ -4,6 +4,8 @@ import { type Metadata } from 'next';
 import Link from 'next/link';
 import { BlogClient } from 'seobot';
 
+const BASE_URL = process.env.BASE_URL
+
 async function getPosts(slug: string, page: number) {
   const key = process.env.SEOBOT_API_KEY;
   if (!key) throw Error('SEOBOT_API_KEY enviroment variable must be set. You can use the DEMO key a8c58738-7b98-4597-b20a-0bb1c2fe5772 for testing - please set it in the root .env.local file.');
@@ -19,10 +21,12 @@ function deslugify(str: string) {
 export const fetchCache = 'force-no-store';
 
 export async function generateMetadata({ params: { slug } }: { params: { slug: string } }): Promise<Metadata> {
+  if (!BASE_URL) throw Error('BASE_URL enviroment variable must be set.');
+  
   const title = `${deslugify(slug)} - DevHunt Blog`;
   return {
     title,
-    metadataBase: new URL('https://devhunt.org'),
+    metadataBase: new URL(BASE_URL),
     alternates: {
       canonical: `/blog/tag/${slug}`,
     },
@@ -31,7 +35,7 @@ export async function generateMetadata({ params: { slug } }: { params: { slug: s
       title,
       // description: '',
       // images: [],
-      url: `https://devhunt.org/blog/tag/${slug}`,
+      url: `${BASE_URL}/blog/tag/${slug}`,
     },
     twitter: {
       title,
