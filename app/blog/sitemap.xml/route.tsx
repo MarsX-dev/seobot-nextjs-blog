@@ -1,4 +1,4 @@
-const BASE_URL = 'https://devhunt.org';
+const BASE_URL = process.env.BASE_URL;
 
 async function getSitemap() {
   const key = process.env.SEOBOT_API_KEY;
@@ -24,7 +24,7 @@ async function generateSiteMap() {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-      <loc>https://devhunt.org/blog</loc>
+      <loc>${BASE_URL}/blog</loc>
     </url>
      ${blogSitemap.articles.map((i: SitemapItem) => toSitemapRecord(`/blog/${i.slug}`, i.lastmod))}
      ${blogSitemap.categories.map((i: SitemapItem) => toSitemapRecord(`/blog/category/${i.slug}`, i.lastmod))}

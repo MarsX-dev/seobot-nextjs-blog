@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'mars-images.imgix.net',
+        hostname: 'assets.seobotai.com',
         port: '',
         pathname: '/**'
       }
