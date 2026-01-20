@@ -2,7 +2,7 @@ const BASE_URL = 'https://devhunt.org';
 
 async function getSitemap() {
   const key = process.env.SEOBOT_API_KEY;
-  if (!key) throw Error('SEOBOT_API_KEY enviroment variable must be set. You can use the DEMO key a8c58738-7b98-4597-b20a-0bb1c2fe5772 for testing - please set it in the root .env.local file.');
+  if (!key) throw Error('SEOBOT_API_KEY environment variable must be set. You can use the DEMO key a8c58738-7b98-4597-b20a-0bb1c2fe5772 for testing - please set it in the root .env.local file.');
 
   try {
     const res = await fetch(`https://app.seobotai.com/api/sitemap?key=${key}`, { cache: 'no-store' });
@@ -26,9 +26,9 @@ async function generateSiteMap() {
     <url>
       <loc>https://devhunt.org/blog</loc>
     </url>
-     ${blogSitemap.articles.map((i: SitemapItem) => toSitemapRecord(`/blog/${i.slug}`, i.lastmod))}
-     ${blogSitemap.categories.map((i: SitemapItem) => toSitemapRecord(`/blog/category/${i.slug}`, i.lastmod))}
-     ${blogSitemap.tags.map((i: SitemapItem) => toSitemapRecord(`/blog/tag/${i.slug}`, i.lastmod))}
+     ${blogSitemap.articles.map((i: SitemapItem) => toSitemapRecord(`/blog/${i.slug}`, i.lastmod)).join('')}
+     ${blogSitemap.categories.map((i: SitemapItem) => toSitemapRecord(`/blog/category/${i.slug}`, i.lastmod)).join('')}
+     ${blogSitemap.tags.map((i: SitemapItem) => toSitemapRecord(`/blog/tag/${i.slug}`, i.lastmod)).join('')}
    </urlset>
  `;
 }
