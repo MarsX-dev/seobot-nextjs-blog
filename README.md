@@ -94,7 +94,7 @@ Revolutionize your website's content strategy with real-time, automated, SEO-opt
 
 ---
 
-## Instructions for Lovable and other Code Agents:
+## Instructions for Lovable and other AI Coding Agents:
 
 ````markdown
 # SEObot Blog Integration — Next.js SSR Integration Guide
