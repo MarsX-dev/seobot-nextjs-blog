@@ -15,16 +15,18 @@ Visit the [DevHunt Blog](https://devhunt.org/blog?utm_source=github) to check ou
 
 ## Environment Setup
 
-First, set up your SEObot API Key environment variable. Create a `.env.local` file for local development:
+First, set up your SEObot API Key and base url environment variables. Create a `.env.local` file for local development:
 
 ```bash
 SEOBOT_API_KEY=<your_seobot_key>
+BASE_URL=<your_base_url>
 ```
 
 ⚠️ You can use following **DEMO** SEOBOT_API_KEY for local development:
 
 ```bash
 SEOBOT_API_KEY=a8c58738-7b98-4597-b20a-0bb1c2fe5772
+BASE_URL=http://localhost:3000/
 ```
 
 ## Running the Development Server
